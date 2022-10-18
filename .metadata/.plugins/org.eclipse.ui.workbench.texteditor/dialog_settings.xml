@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="isRegEx"/>
+		<item value="prod" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="prod"/>
+			<item value="&lt;servlet-name&gt;default&lt;/servlet-name&gt;"/>
+			<item value="DefaultServlet"/>
+			<item value="\.vo\."/>
+			<item value="init"/>
+			<item value="vali"/>
+			<item value="jackson"/>
+			<item value="\.jsp"/>
+			<item value="/WEB-INF/views/"/>
+			<item value="constructor-arg"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="property"/>
+			<item value="buyer"/>
+			<item value="BuyerVO"/>
+			<item value="\${pageContext.request.contextPath }"/>
+			<item value="\${member[&apos;mem$1&apos;] }"/>
+			<item value="\${prod.prod$1 }"/>
+			<item value="\${buyer.buyer$1 }"/>
+			<item value="\${errors.$1 }"/>
+			<item value="\${errors[&apos;$1&apos;] }"/>
+			<item value="Prod"/>
+			<item value="prod"/>
+			<item value="ProdVO"/>
+			<item value="&lt;/span&gt;\n\t\t&lt;/td&gt;"/>
+			<item value="&lt;td&gt;\n\t\t\t&lt;input"/>
+		</list>
+	</section>
+	<section name="org.eclipse.wst.xml.ui.internal.preferences.XMLTemplatePreferencePage$XMLEditTemplateDialog_dialogBounds">
+		<item value="615" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="331" key="DIALOG_HEIGHT"/>
+		<item value="45" key="DIALOG_X_ORIGIN"/>
+		<item value="58" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="406" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="443" key="DIALOG_HEIGHT"/>
+		<item value="600" key="DIALOG_X_ORIGIN"/>
+		<item value="447" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

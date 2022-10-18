@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;num&apos; in &apos;kr.or.ddit.method.MethodCallDesc.numberCount(...)&apos; to &apos;number&apos;&#x0D;&#x0A;- Original project: &apos;LanguageLab&apos;&#x0D;&#x0A;- Original element: &apos;kr.or.ddit.method.MethodCallDesc.numberCount(int).num&apos;&#x0D;&#x0A;- Renamed element: &apos;num&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;num&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;kr.or.ddit.method{MethodCallDesc.java[MethodCallDesc~numberCount~I@num!400!406!404!406!I!0!true" name="number" references="true" stamp="1663823889881" version="1.0"/>
+</session>

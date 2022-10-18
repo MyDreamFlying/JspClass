@@ -1,0 +1,54 @@
+package kr.or.ddit.member.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import kr.or.ddit.member.service.MemberService;
+import kr.or.ddit.member.service.MemberServiceImpl;
+import kr.or.ddit.vo.MemberVO;
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+public class MemberViewController{
+	private final MemberService service;
+	
+	@RequestMapping("/member/memberView.do")
+	public String memberView(@RequestParam(name="who", required=true) String memId){
+		MemberVO member = service.retrieveMember(memId);
+		
+		req.setAttribute("member", member);
+		
+		String layout = req.getParameter("layout");
+		if("GRID".equals(layout)) {
+			viewResolve("member/memberView", req, resp);
+		}else {
+			String viewName = "/WEB-INF/views/member/memberView.jsp";
+			req.getRequestDispatcher(viewName).forward(req, resp);
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

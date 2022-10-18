@@ -1,0 +1,20 @@
+package kr.or.ddit.board.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/board/boardInsert.do")
+public class BoardInsertController {
+	@GetMapping
+	public String boardForm() {
+		return "board/boardForm";
+	}
+	
+	@PostMapping
+	public boardInsert() {
+		
+	}
+}

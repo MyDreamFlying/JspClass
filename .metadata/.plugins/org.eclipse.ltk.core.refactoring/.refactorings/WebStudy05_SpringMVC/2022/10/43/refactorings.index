@@ -1,0 +1,28 @@
+1666060549349	Delete elements
+1666060605871	Delete element
+1666069031905	Delete element
+1666069055669	Delete elements
+1666069076512	Delete elements
+1666069219013	Move 'tiles.xml' to 'tiles'
+1666069225025	Rename resource 'tiles.xml'
+1666069317130	Rename type 'IndexServlet'
+1666069395393	Rename resource 'mapper'
+1666071857841	Delete element
+1666072901535	Delete element
+1666072917282	Delete element
+1666072946213	Delete elements
+1666072971347	Delete element
+1666073242839	Rename type 'LoginProcessServlet'
+1666074345708	Move 'login' to 'views'
+1666074629927	Rename type 'MyPageServlet'
+1666076423516	Rename type 'MemberListServlet'
+1666076644837	Rename type 'MemberViewServlet'
+1666076951033	Rename type 'MemberDeleteServlet'
+1666077032547	Rename local variable 'commandPage'
+1666080297167	Rename type 'BuyerListServlet'
+1666080417997	Rename type 'BuyerListController'
+1666080431234	Delete element
+1666080512486	Rename type 'BuyerInsertServlet'
+1666080722270	Rename local variable 'logicalViewName'
+1666080751784	Rename type 'BuyerUpdateServlet'
+1666080905782	Rename local variable 'logicalViewName'

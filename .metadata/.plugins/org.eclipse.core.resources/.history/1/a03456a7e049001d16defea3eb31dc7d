@@ -1,0 +1,25 @@
+package kr.or.ddit.etc.controller;
+
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+@RequestMapping("/calculate")
+public class CalculateController {
+	@RequestMapping("form")
+	public String calForm() {
+		return "etc/calculateForm";
+	}
+//	case1. JSON -> JSON
+	@PostMapping(consumes=MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public jsonToJson() {
+		
+		
+	}
+//	case2. JSON -> HTML
+//	case3. prameter -> JSON
+//	case4. prameter -> HTML
+}

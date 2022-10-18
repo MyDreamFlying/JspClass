@@ -1,0 +1,25 @@
+package kr.or.ddit.board.vo;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode(of="attNo")
+public class AttatchVO {
+	@NotNull
+	private Integer attNo;
+	private Integer boNo;
+	@NotBlank
+	private String attFilename;
+	@NotBlank
+	private String attSavename;
+	private String attMime;
+	@NotNull
+	private Long attFilesize;
+	@NotBlank
+	private String attFancysize;
+	private Integer attDownload;
+}

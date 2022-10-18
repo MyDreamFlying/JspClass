@@ -1,0 +1,25 @@
+<%@ page import="java.util.Calendar" %>
+<%@ page import="static java.util.Calendar.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05/calendar.jsp</title>
+</head>
+<body>
+<table>
+	<%
+		int count = 1;
+		for(int row=1; row<=6; row++){
+			out.println("<tr>");
+			for(int col=SUNDAY; col<=SATURDAY; col++){
+				out.println(String.format("<td>%d</td>", count++));
+			}
+			out.println("</tr>");
+		}
+	%>
+</table>
+</body>
+</html>

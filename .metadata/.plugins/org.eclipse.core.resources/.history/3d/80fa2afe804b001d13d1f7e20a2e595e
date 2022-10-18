@@ -1,0 +1,12 @@
+package kr.or.ddit.board.dao;
+
+import kr.or.ddit.board.vo.AttatchVO;
+import kr.or.ddit.board.vo.BoardVO;
+
+// CRUD
+public interface AttatchDAO {
+	public int insertAttatch(BoardVO board);
+//	select
+//	update
+//	delete
+}

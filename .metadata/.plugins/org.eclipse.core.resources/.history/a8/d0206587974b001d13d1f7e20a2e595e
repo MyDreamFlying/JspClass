@@ -1,0 +1,11 @@
+package kr.or.ddit.board.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class BoardRecommendController {
+
+	@RequestMapping("/board/boardRecommend.do")
+	public recommend() {
+		
+	}
+}

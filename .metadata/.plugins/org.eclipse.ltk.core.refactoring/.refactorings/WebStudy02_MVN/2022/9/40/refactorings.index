@@ -1,0 +1,27 @@
+1664152254899	Delete element
+1664153068977	Delete element
+1664244363621	Rename local variable 'commandPage'
+1664249657137	Copy compilation unit
+1664258382451	Copy compilation unit
+1664258386653	Rename type 'MemberViewPreparer'
+1664260558465	Rename local variable 'member'
+1664260641729	Rename local variable 'member'
+1664349798850	Change method 'selectMemberList'
+1664350076746	Change method 'retrieveMemberList'
+1664411034469	Change method 'selectProdList'
+1664411203388	Change method 'retrieveProdList'
+1664501127148	Copy file
+1664515622699	Copy compilation unit
+1664519198614	Copy file
+1664519201640	Delete element
+1664520776625	Copy compilation unit
+1664520782131	Rename type 'ProdViewPreparer'
+1664521880652	Rename resource 'buyerList.js'
+1664522486957	Rename field 'pattern'
+1664524336866	Copy compilation unit
+1664524339511	Delete element
+1664524343954	Rename type 'ProdViewServlet'
+1664524376675	Rename local variable 'prodId'
+1664526960036	Copy compilation units
+1664526967518	Rename type 'ProdInsertServlet'
+1664526973993	Rename type 'ProdUpdateServlet'

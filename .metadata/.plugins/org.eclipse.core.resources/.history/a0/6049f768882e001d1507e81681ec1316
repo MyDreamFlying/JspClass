@@ -1,0 +1,50 @@
+<%@ page import="java.util.Calendar" %>
+<%@ page import="static java.util.Calendar.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	Calendar calendar = getInstance();
+	calendar.set(DAY_OF_MONTH, 1);
+	int dayOfWeek1st = calendar.get(DAY_OF_WEEK);
+	int offset = dayOfWeek1st - 1;
+	calendar.add(DAY_OF_MONTH, -offset);
+%>    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05/calendar.jsp</title>
+</head>
+<body>
+<table>
+	<%
+		for(int row=1; row<=6; row++){
+			out.println("<tr>");
+			for(int col=SUNDAY; col<=SATURDAY; col++){
+				out.println(String.format("<td>%te</td>", calendar));
+				calendar.add(DAY_OF_MONTH, 1);
+			}
+			out.println("</tr>");
+		}
+	%>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

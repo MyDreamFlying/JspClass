@@ -1,0 +1,66 @@
+package kr.or.ddit.advice;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.Signature;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * Cross Cutting Concern 코드화 -> Advice
+ *
+ */
+@Slf4j
+public class LoggingAdvice {
+	public void before(JoinPoint joinPoint) {
+		log.info("====================================");
+		Signature signature = joinPoint.getSignature(); // 타겟 메소드의 선언부 정보
+		String targetMethodName = signature.getName();
+		Object target = joinPoint.getTarget();
+		String targetClassName = target.getClass().getSimpleName();
+		Object[] args = joinPoint.getArgs();
+		log.info("{}.{}({})", targetClassName, targetMethodName, args);
+	}
+	
+	public void afterReturn(JoinPoint joinPoint, Object retValue) {
+		Signature signature = joinPoint.getSignature(); // 타겟 메소드의 선언부 정보
+		String targetMethodName = signature.getName();
+		Object target = joinPoint.getTarget();
+		String targetClassName = target.getClass().getSimpleName();
+		log.info("{}.{} 의 반환값 : {}", targetClassName, targetMethodName, retValue);
+	}
+	
+	public Object around(ProceedingJoinPoint joinPoint) {
+		log.info("====================================");
+		Signature signature = joinPoint.getSignature(); // 타겟 메소드의 선언부 정보
+		String targetMethodName = signature.getName();
+		Object target = joinPoint.getTarget();
+		String targetClassName = target.getClass().getSimpleName();
+		Object[] args = joinPoint.getArgs();
+		log.info("{}.{}({})", targetClassName, targetMethodName, args);
+		long start = System.currentTimeMillis();
+		// -----------
+		Object retValue = joinPoint.proceed(args);
+		long end = System.currentTimeMillis();
+		log.info("{}.{} 의 반환값 : {}", targetClassName, targetMethodName, retValue);
+		return retValue;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

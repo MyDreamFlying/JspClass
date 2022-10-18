@@ -1,0 +1,11 @@
+package kr.or.ddit.advice;
+
+/**
+ * Cross Cutting Concern 코드화 -> Advice
+ *
+ */
+public class LoggingAdvice {
+	public void before() {
+		
+	}
+}

@@ -1,0 +1,48 @@
+package kr.or.ddit.board.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import kr.or.ddit.board.service.BoardService;
+import kr.or.ddit.board.vo.BoardVO;
+import kr.or.ddit.enumpkg.ServiceResult;
+import kr.or.ddit.validate.DeleteGroup;
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Controller
+public class BoardDeleteController {
+	private final BoardService service;
+	
+	@PostMapping("/board/boardDelete.do")
+	public String boardDelete(
+		@Validated(DeleteGroup.class) BoardVO board
+		, BindingResult errors
+	) {
+		String viewName = null;
+		if(!errors.hasErrors()) {
+			ServiceResult result = service.removeBoard(board);
+			switch (result) {
+			case INVALIDPASSWORD:
+				viewName = "redirect:/board/boardView.do?what="+board.getBoNo();
+				break;
+			case OK:
+				break;
+			default:
+				viewName = "redirect:/board/boardView.do?what="+board.getBoNo();
+				break;
+			}
+		}else {
+			viewName = "redirect:/board/boardView.do?what="+board.getBoNo();
+		}
+		return viewName;
+	}
+}
+
+
+
+
+
+

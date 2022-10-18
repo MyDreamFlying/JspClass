@@ -1,0 +1,98 @@
+package kr.or.ddit.buyer.controller;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.List;
+import java.util.Map;
+
+import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.or.ddit.buyer.service.BuyerService;
+import kr.or.ddit.enumpkg.ServiceResult;
+import kr.or.ddit.prod.dao.OthersDAO;
+import kr.or.ddit.validate.InsertGroup;
+import kr.or.ddit.validate.ValidateUtils;
+import kr.or.ddit.vo.BuyerVO;
+
+@Controller
+@RequestMapping("/buyer/buyerInsert.do")
+public class BuyerInsertController{
+	@Inject
+	private BuyerService service;
+	@Inject
+	private OthersDAO othersDAO;
+	
+	@ModelAttribute("command")
+	public String command() {
+		return "INSERT";
+	}
+	
+	@ModelAttribute("lprodList")
+	public List<Map<String, Object>> lprodList(){
+		return othersDAO.selectLprodList();
+	}
+	
+	@GetMapping
+	public String buyerForm(){
+		return "buyer/buyerForm";
+	}
+	
+	@PostMapping
+	public String buyerInsert(
+		@ModelAttribute("buyer") BuyerVO buyer	
+			
+	){
+		BuyerVO buyer = new BuyerVO();
+		req.setAttribute("buyer", buyer);
+		try {
+			BeanUtils.populate(buyer, req.getParameterMap());
+		} catch (IllegalAccessException | InvocationTargetException e) {
+			throw new RuntimeException(e);
+		}
+		
+		
+		Map<String, String> errors = new ValidateUtils<BuyerVO>().validate(buyer, InsertGroup.class);
+		req.setAttribute("errors", errors);
+		
+		String logicalViewName = null;
+		if(errors.isEmpty()) {
+			ServiceResult result = service.createBuyer(buyer);
+			switch (result) {
+			case OK:
+				logicalViewName = "redirect:/buyer/buyerView.do?what="+buyer.getBuyerId();
+				break;
+
+			default:
+				req.setAttribute("message", "서버 오류, 쫌따 다시 하셈.");
+				logicalViewName = "buyer/buyerForm";
+				break;
+			}
+		}else {
+			logicalViewName = "buyer/buyerForm";
+		}
+		viewResolve(logicalViewName, req, resp);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

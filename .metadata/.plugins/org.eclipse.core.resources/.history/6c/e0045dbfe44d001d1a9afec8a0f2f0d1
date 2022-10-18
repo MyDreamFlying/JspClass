@@ -1,0 +1,14 @@
+package kr.or.ddit.advice;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * Cross Cutting Concern 코드화 -> Advice
+ *
+ */
+@Slf4j
+public class LoggingAdvice {
+	public void before() {
+		log.info("====================================");
+	}
+}

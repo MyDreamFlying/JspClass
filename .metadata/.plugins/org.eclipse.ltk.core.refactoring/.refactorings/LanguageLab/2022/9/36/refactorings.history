@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;kr.or.ddit.io.StreamDesc.readAndPrint()&apos; to &apos;readAndPrintFileSystemResource&apos;&#x0D;&#x0A;- Original project: &apos;LanguageLab&apos;&#x0D;&#x0A;- Original element: &apos;kr.or.ddit.io.StreamDesc.readAndPrint()&apos;&#x0D;&#x0A;- Renamed element: &apos;kr.or.ddit.io.StreamDesc.readAndPrintFileSystemResource()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;readAndPrint&apos;" flags="589826" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java&lt;kr.or.ddit.io{StreamDesc.java[StreamDesc~readAndPrint" name="readAndPrintFileSystemResource" references="true" stamp="1662016699730" version="1.0"/>
+</session>

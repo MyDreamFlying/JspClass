@@ -26,3 +26,15 @@
 1666080722270	Rename local variable 'logicalViewName'
 1666080751784	Rename type 'BuyerUpdateServlet'
 1666080905782	Rename local variable 'logicalViewName'
+1666082537140	Rename type 'MemberInsertServlet'
+1666083732764	Rename type 'MemberUpdateServlet'
+1666142662072	Delete element
+1666142671550	Rename type 'ProdListServlet'
+1666142796679	Rename type 'ProdListController'
+1666143597135	Delete elements
+1666143644950	Rename type 'OthersListServlet'
+1666143649382	Rename type 'OthersListControll'
+1666148301346	Rename type 'ProdInsertServlet'
+1666149705170	Rename type 'ProdUpdateServlet'
+1666158291108	Delete element
+1666158822185	Delete elements

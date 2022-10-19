@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=LanguageLab/src\/main\/java&lt;kr.or.ddit.designpattern.templatemethod.example1{TemplateClass.java[TemplateClass" modifiers="1025" timestamp="1663901061257"/>
+<typeInfo handle="=LanguageLab/src\/main\/java&lt;kr.or.ddit.designpattern.templatemethod.example2{SqlMapClient.java[SqlMapClient" modifiers="1025" timestamp="1663902157000"/>
+<typeInfo handle="=LanguageLab/src\/main\/java&lt;kr.or.ddit.designpattern.adapter{Target.java[Target" modifiers="513" timestamp="1664853381174"/>
+<typeInfo handle="=LanguageLab/C:\/Program Files\/Java\/jdk1.8.0_121\/jre\/lib\/rt.jar&lt;java.beans(PropertyEditor.class[PropertyEditor" modifiers="1537" timestamp="1653889377261"/>
+</typeInfoHistroy>

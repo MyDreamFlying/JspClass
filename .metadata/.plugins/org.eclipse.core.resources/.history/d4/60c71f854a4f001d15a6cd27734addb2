@@ -1,0 +1,8 @@
+package kr.or.ddit.test;
+
+import org.springframework.stereotype.Repository;
+
+
+public class TestDAO {
+
+}

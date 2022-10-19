@@ -43,16 +43,6 @@ public class MemberListController{
 		, @RequestParam(name="page", required=false, defaultValue="1") int currentPage
 		, Model model
 	){
-//		String searchType = req.getParameter("searchType");
-//		String searchWord = req.getParameter("searchWord");
-//		SearchVO simpleCondition = new SearchVO(searchType, searchWord);
-		
-//		String pageParam = req.getParameter("page");
-//		int currentPage = 1;
-//		if(StringUtils.isNumeric(pageParam)) {
-//			currentPage = Integer.parseInt(pageParam);
-//		}
-		
 		PagingVO<MemberVO> pagingVO = new PagingVO<>(3,2);
 		pagingVO.setCurrentPage(currentPage);
 		pagingVO.setSimpleCondition(simpleCondition);
@@ -61,7 +51,7 @@ public class MemberListController{
 		pagingVO.setTotalRecord(totalRecord);
 		List<MemberVO> memberList = service.retrieveMemberList(pagingVO);
 		pagingVO.setDataList(memberList);
-//		req.setAttribute("memberList", memberList);
+
 		model.addAttribute("pagingVO", pagingVO);
 		
 		return "member/memberList";

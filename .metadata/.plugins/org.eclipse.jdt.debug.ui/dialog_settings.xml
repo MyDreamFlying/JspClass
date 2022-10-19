@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0" value="126"/>
-	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1" value="212"/>
-	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2" value="85"/>
-	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
-	<section name="expressionHistory">
-	</section>
+	<item value="85" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2"/>
+	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
+	<item value="212" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1"/>
+	<item value="126" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0"/>
 	<section name="conditionHistory">
+	</section>
+	<section name="expressionHistory">
 	</section>
 </section>

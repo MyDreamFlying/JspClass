@@ -1,0 +1,64 @@
+/**
+ * 
+ */
+  	let ws = null;
+  	
+    $(function(){
+    	function consoleLog(){
+    		console.log(arguments);
+    	}
+    	ws = new SockJS("${cPath}/wsConnect");
+		ws.onopen=consoleLog;    	
+		ws.onclose=consoleLog;    	
+		ws.onerror=consoleLog;    	
+		ws.onmessage=function(event){
+			if(event.data=='RELOAD'){
+				location.reload(true);
+			}
+		};    	
+    	let saveFunction = function(event){
+    		event.preventDefault();
+    		let data = ckeditor.getData();
+    		$.ajax({
+    			method:"post",
+    			data:data,
+    			dataType:"text",
+    			contentType:"text/plain",
+    			success:function(resp){
+    				if(resp=="FAIL"){
+						alert("저장 실패");	    					
+    				}else{
+	    				location.href=resp;
+    				}
+    			}
+    		});
+    		return false;
+    	}
+    	let clearFunction = function(event){
+    		event.preventDefault();
+    		let data = ckeditor.getData();
+    		$.ajax({
+    			method:"put",
+    			dataType:"text",
+    			success:function(resp){
+    				location.href=resp;
+    			}
+    		});
+    		return false;
+    	}
+    	$(document).on("keydown", function(event){
+    		let retValue = true;
+    		if(event.keyCode==83 && event.ctrlKey){
+				retValue = saveFunction(event);
+    		}else if(event.keyCode==67 && event.altKey){
+				retValue = clearFunction(event);
+    		}
+    		return retValue;
+        });
+    });
+    try{
+	    CKEDITOR.disableAutoInline = true;
+	    ckeditor = CKEDITOR.inline('editor1', {
+	      extraPlugins: 'sourcedialog'
+	    });
+    }catch(e){}

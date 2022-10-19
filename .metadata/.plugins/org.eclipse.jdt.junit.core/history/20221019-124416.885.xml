@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OthersDAOImplTest" project="WebStudy05_SpringMVC" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="kr.or.ddit.prod.dao.OthersDAOImplTest" time="0.519">
+    <testcase name="testSelectBuyerList" classname="kr.or.ddit.prod.dao.OthersDAOImplTest" time="0.513"/>
+    <testcase name="testSelectLprodList" classname="kr.or.ddit.prod.dao.OthersDAOImplTest" time="0.006"/>
+  </testsuite>
+</testrun>

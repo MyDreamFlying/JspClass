@@ -135,3 +135,10 @@
 10월 17, 2022 18:38:59.39 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
 10월 17, 2022 18:55:57.33 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
 10월 17, 2022 20:02:27.37 [12160:296:1017/200227.372:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+10월 19, 2022 14:54:38.48 NEW SESSION
+10월 19, 2022 14:54:38.48 [10220:11976:1019/145438.485:ERROR:device_event_log_impl.cc(214)] [14:54:38.485] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 19, 2022 14:55:35.71 [10220:10668:1019/145535.712:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+10월 19, 2022 16:15:20.41 [10220:11976:1019/161520.419:ERROR:device_event_log_impl.cc(214)] [16:15:20.419] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: ��Ұ� �����ϴ�. (0x490)
+10월 19, 2022 17:27:19.44 [10220:11976:1019/172719.444:ERROR:device_event_log_impl.cc(214)] [17:27:19.443] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: ��Ұ� �����ϴ�. (0x490)
+10월 19, 2022 18:18:46.93 [10220:11976:1019/181846.931:ERROR:device_event_log_impl.cc(214)] [18:18:46.940] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: ��Ұ� �����ϴ�. (0x490)

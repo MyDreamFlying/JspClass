@@ -1,0 +1,5 @@
+package kr.or.ddit.security;
+
+public class TextEncryptTest {
+
+}

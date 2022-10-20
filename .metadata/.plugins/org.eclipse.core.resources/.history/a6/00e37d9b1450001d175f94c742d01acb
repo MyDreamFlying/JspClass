@@ -1,0 +1,30 @@
+package kr.or.ddit.security;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+
+/**
+ * Encoding(부호화, decoding) - 전송이나 저장을 목적으로 매체를 이용하는 경우, 매체가 인지할 수 있는 방식으로 데이터의 표현 방식을 바꾸는 과정.
+ * 	ex) %2T (percent encoding, URL encoding), base64
+ * 한글->-0101010101, img src="data:image/png;base64,asdfassadfdasd"
+ * Encrypting(암호화, decrypting) - 허가받지 않은 공격자의 도청(위변조)를 막기 위해 데이터의 표현 구조를 변경하는 과정.
+ * 		단방향 암호화 - 원래 평문 복원이 불가능함. 비밀번호 암호화
+ * 		양방향 암호화 - key의 소유자가 평문 복원이 가능.
+ * 			대칭키 방식 - 하나의 비밀키로 암복호화, 전송 데이터 암호화
+ * 			비대칭키 방식 - 한쌍(공개키, 개인키)의 키로 암복호화, 전자 서명
+ *
+ */
+public class EncryptDesc {
+	public static void main(String[] args) throws Exception{
+		String plain = "평문 데이터";
+		
+	}
+	
+	public static void encodingSample(String plain) throws UnsupportedEncodingException {
+		String encoded = URLEncoder.encode(plain, "UTF-8");
+		System.out.println(encoded);
+		String decoded = URLDecoder.decode(encoded, "UTF-8");
+		System.out.println(decoded);
+	}
+}

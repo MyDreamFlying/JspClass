@@ -1,0 +1,20 @@
+package kr.or.ddit.security;
+
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+
+/**
+ * Encoding - 전송이나 저장을 목적으로 매체를 이용하는 경우, 매체가 인지할 수 있는 방식으로 데이터의 표현 방식을 바꾸는 과정.
+ * 	ex) %2T (percent encoding, URL encoding), base64
+ * 한글->-0101010101, img src="data:image/png;base64,asdfassadfdasd"
+ *
+ */
+public class EncryptDesc {
+	public static void main(String[] args) throws Exception{
+		String plain = "평문 데이터";
+		String encoded = URLEncoder.encode(plain, "UTF-8");
+		System.out.println(encoded);
+		String decoded = URLDecoder.decode(encoded, "UTF-8");
+		System.out.println(decoded);
+	}
+}

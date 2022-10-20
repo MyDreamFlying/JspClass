@@ -1,3 +1,0 @@
-javax.validation.constraints.NotBlank.message=REQUIRED
-javax.validation.constraints.Email.message=Mail address check
-javax.validation.constraints.Size.message=SIZE{min}~{max}

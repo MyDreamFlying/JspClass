@@ -2,33 +2,33 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="editable" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="editable"/>
 			<item value="required=&quot;true&quot;"/>
+			<item value="/&gt;&lt;/td&gt;"/>
+			<item value="&lt;td&gt;&lt;form"/>
+			<item value="&lt;tr&gt;\R\t\t&lt;th&gt;상품이미지&lt;/th&gt;\R\t\t&lt;td&gt;&lt;/td&gt;\R\t&lt;/tr&gt;"/>
 			<item value="prod"/>
 			<item value="prodLgu"/>
 			<item value="\s+required"/>
 			<item value="\R\t\t\t\t\trequired"/>
-			<item value="/&gt;&lt;/td&gt;"/>
-			<item value="&lt;td&gt;&lt;form"/>
 			<item value="&lt;td&gt;&lt;form:input"/>
 			<item value="&lt;servlet-name&gt;jsp&lt;/servlet-name&gt;"/>
 			<item value="jspServlet"/>
 			<item value="&lt;servlet-name&gt;default&lt;/servlet-name&gt;"/>
 			<item value="DefaultServlet"/>
 			<item value="\.vo\."/>
-			<item value="init"/>
-			<item value="vali"/>
 		</list>
 		<list key="replacehistory">
-			<item value=""/>
-			<item value=" required"/>
 			<item value="/&gt;\n\t\t\t&lt;/td&gt;"/>
 			<item value="&lt;td&gt;\n\t\t\t\t&lt;form"/>
+			<item value=""/>
+			<item value=" required"/>
 			<item value="&lt;td&gt;\n\t\t\t\t&lt;form:input"/>
 			<item value="property"/>
 			<item value="buyer"/>

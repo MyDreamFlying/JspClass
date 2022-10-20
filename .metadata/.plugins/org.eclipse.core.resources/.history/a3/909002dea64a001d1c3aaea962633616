@@ -1,2 +1,0 @@
-javax.validation.constraints.NotBlank.message=REQUIRED
-javax.validation.constraints.Email.message=Mail address check

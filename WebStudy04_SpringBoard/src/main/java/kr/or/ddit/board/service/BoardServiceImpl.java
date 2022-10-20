@@ -7,10 +7,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,6 +31,9 @@ import lombok.extern.slf4j.Slf4j;
 public class BoardServiceImpl implements BoardService {
 	private final BoardDAO boardDAO;
 	private final AttatchDAO attatchDAO;
+	
+	@Inject
+	private PasswordEncoder passwordEncoder;
 	
 	@Value("#{appInfo.attatchFolder}")
 	private Resource attatchFolder;
@@ -59,9 +64,18 @@ public class BoardServiceImpl implements BoardService {
 		return rowcnt;
 	}
 	
+	private void encryptBoard(BoardVO board) {
+		String plain = board.getBoPass();
+		String encoded = passwordEncoder.encode(plain);
+		board.setBoPass(encoded);
+	}
+	
 	@Transactional // 선언적 프로그래밍 기법(AOP)
 	@Override
 	public ServiceResult createBoard(BoardVO board) {
+		//===========암호화==========
+		encryptBoard(board);
+		//=========================
 		int rowcnt = boardDAO.insertBoard(board);  // 1.
 		rowcnt += processAttatchList(board);
 		return rowcnt > 0 ? ServiceResult.OK : ServiceResult.FAIL;
@@ -93,8 +107,8 @@ public class BoardServiceImpl implements BoardService {
 	private boolean boardAuthenticate(BoardVO board) {
 		BoardVO saved = retrieveBoard(board.getBoNo());
 		String inputPass = board.getBoPass();
-		String savedPass = saved.getBoPass();
-		return savedPass.equals(inputPass);
+		String savedPass = saved.getBoPass(); // 암호화되어 저장된 비밀번호
+		return passwordEncoder.matches(inputPass, savedPass);
 	}
 	
 	@Transactional

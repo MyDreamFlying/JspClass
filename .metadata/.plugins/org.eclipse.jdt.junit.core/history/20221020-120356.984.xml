@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TextEncryptTest" project="SpringIoCLab" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="kr.or.ddit.security.TextEncryptTest" time="0.156">
-    <testcase name="encryptTest" classname="kr.or.ddit.security.TextEncryptTest" time="0.156"/>
-  </testsuite>
-</testrun>

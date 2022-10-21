@@ -61,7 +61,7 @@
 		ws.onmessage=function(event){
 			if(event.data=='RELOAD'){
 				$.notify(event.data+"!");
-				window.settimeout(function(){
+				window.setTimeout(function(){
 					location.reload(true);
 				}, 1200);
 			}

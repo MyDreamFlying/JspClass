@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="PasswordEncoderTest" project="SpringIoCLab" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="kr.or.ddit.security.PasswordEncoderTest" time="0.413">
-    <testcase name="encrptTest" classname="kr.or.ddit.security.PasswordEncoderTest" time="0.413"/>
-  </testsuite>
-</testrun>

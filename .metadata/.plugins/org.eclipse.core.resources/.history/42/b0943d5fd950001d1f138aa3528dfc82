@@ -1,0 +1,30 @@
+package kr.or.ddit.batch;
+
+/**
+ * 1부터 20까지의 숫자를 매 1초마다 반복적으로 콘솔에 출력할 것.
+ *
+ */
+public class PrintNumberJobTest {
+
+	static class MyThread extends Thread {
+		@Override
+		public void run() {
+
+			for (int i = 0; i < 20; i++) {
+				System.out.println(i);
+
+				try {
+					sleep(1000);
+				} catch (InterruptedException e) {
+					return;
+				}
+			}
+		}
+
+	}
+	public static void main(String[] args) throws Exception {
+		
+		MyThread myThread = new MyThread();
+		myThread.start();
+	}
+}
